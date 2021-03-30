@@ -1,0 +1,18 @@
+.principal__imagen {
+  order: 2;
+  animation-duration: 3s;
+  animation-delay: 1.5s;
+}
+
+@media screen and (min-width: 992px) {
+  .principal__imagen {
+    order: 1;
+    flex: 0 0 calc(50% - 5px);
+    animation-delay: 0;
+  }
+}
+
+.imgPrincipal {
+  width: 100%;
+  max-width: 400px;
+}

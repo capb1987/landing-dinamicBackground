@@ -1,0 +1,24 @@
+.activoPrincipal {
+  margin-top: 250px;
+  transition: 0.5s all;
+}
+
+.desactivadoPrincipal {
+  margin-top: 0;
+  transition: 0.5s all;
+}
+.principal {
+  display: flex;
+  min-height: 80vh;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+
+@media screen and (min-width: 992px) {
+  .principal {
+    margin: 0 auto;
+    align-items: center;
+    flex-direction: row;
+  }
+}

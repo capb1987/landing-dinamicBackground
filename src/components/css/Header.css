@@ -1,0 +1,159 @@
+/* GENERAL */
+
+.contenedor {
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 992px) {
+  .contenedor {
+    width: 90%;
+    max-width: 950px;
+  }
+}
+
+/* HEADER */
+.contenido__cabecera {
+  height: 80px;
+  padding: 10px;
+  text-align: center;
+}
+
+@media screen and (min-width: 992px) {
+  .contenido__cabecera {
+    text-align: left;
+  }
+}
+
+/* MENU TOOGLE */
+
+.toogleNavegacion {
+  display: block;
+  cursor: pointer;
+}
+
+.esActivo .barra:nth-child(2) {
+  transform: translateX(-100%);
+  opacity: 0;
+}
+.esActivo .barra:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+.esActivo .barra:nth-child(3) {
+  transform: translateY(-10px) rotate(-45deg);
+}
+
+.barra {
+  display: block;
+  width: 25px;
+  height: 4px;
+  background-color: #fff;
+  margin: 5px 0;
+  transition: 0.5s ease-in-out;
+  border-radius: 5px;
+}
+
+@media screen and (min-width: 992px) {
+  .toogleNavegacion {
+    display: none;
+  }
+}
+
+.cabecera {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+@media screen and (min-width: 992px) {
+  .cabecera {
+    flex-direction: row;
+  }
+}
+/* LOGO */
+
+.cabecera__logo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 10px;
+}
+
+@media screen and (min-width: 992px) {
+  .cabecera__logo {
+    display: block;
+    width: 25%;
+  }
+}
+
+.logo__titulo {
+  font-family: "Akaya Telivigala", cursive;
+  font-size: 30px;
+  text-transform: uppercase;
+}
+
+@media screen and (min-width: 480px) {
+  .logo__titulo {
+    font-size: 45px;
+  }
+}
+
+/* NAVEGACION */
+.cabecera__navegacion {
+  display: flex;
+  flex-direction: column;
+  margin: 15px 0;
+  position: absolute;
+  top: 50px;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.visibilidadMenu {
+  opacity: 1;
+  transition: 0.5s all;
+  transform: translateY(10%);
+  visibility: visible;
+}
+
+.ocultarMenu {
+  opacity: 0;
+  transition: 0.5s all;
+  transform: translateY(0);
+  visibility: hidden;
+}
+
+@media screen and (min-width: 992px) {
+  .cabecera__navegacion {
+    position: relative;
+    top: 0;
+    flex-direction: row;
+    margin: 0;
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+.navegacion__item {
+  text-decoration: none;
+  color: white;
+  margin: 10px 0;
+  font-size: 20px;
+  padding: 10px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.navegacion__item:hover {
+  background-color: white;
+  color: #0984e3;
+  transition: 0.5s all;
+  transform: translateY(15%) scale(1.1);
+}
+
+@media screen and (min-width: 992px) {
+  .navegacion__item {
+    margin: 0 10px;
+  }
+}
